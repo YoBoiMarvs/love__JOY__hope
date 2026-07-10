@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="StyleSheet" href="bday.css">
+    <script src="bday.js"></script>
+</head>
+<body id="body_page2">
+
+    <audio autoplay id="chipi">
+        <source src="soundpad.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="stage">
+        <img src="dancing_dog.gif" class="dancer"
+        id="dancer1">
+        <img src="dancing_rat.gif" class="dancer"
+        id="dancer2">
+        <img src="dancing_sb1.gif" class="dancer"
+        id="dancer3">
+         <img src="dancing_cat1.gif" class="dancer"
+        width="200px" height="200px" id="dancer4">
+    </div>
+
+    <div id="second_part">
+        <div class="faces" id="face1">
+            <div class="Speech_Bubble">Happy birthday, ate DJ!</div>
+
+            <img id="party_face" src="party_face.png" alt="party_face" width="350px" height="auto">
+
+            <audio id="party_horn">
+                <source src="party_horn.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="faces" id="face2">
+            <div class="Speech_Bubble">Hold up, Marvs aint finished yet!</div>
+
+            <img id="mewing_face" src="mewing_face.png" alt="mewing_face" width="350px" height="auto">
+        </div>
+
+        <div class="faces" id="face3">
+            <div class="Speech_Bubble">It's time for some real surprises</div>
+
+            <img id="devious_face" src="devious_face.png" alt="devious_face" width="350px" height="auto">
+        </div>
+
+        <div class="faces" id="face4">
+            <div class="Speech_Bubble">Let's move on to the final phase, shall we?</div>
+
+            <img id="wink_face" src="wink_face.png" alt="wink_face" width="350px" height="auto">
+
+            <button id="next_btn" onclick="nextBtn_clicked()">LESGOOO</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+
+    <script>
+        window.onload = () => {
+            setTimeout(() => {
+            const second_part = document.getElementById("second_part");
+            second_part.style.display = "flex";
+            second_part.style.animation = "popUp 0.3s ease forwards";
+            document.getElementById("party_horn").play();
+            confetti({
+                particleCount: 100,
+                spread: 120,
+                origin: { y: 0.6 }});
+            },13000);
+        }
+    </script>
+</html> 

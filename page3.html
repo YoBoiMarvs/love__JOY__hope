@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="StyleSheet" href="bday.css">
+    <script src="bday.js"></script>
+</head>
+<body id="body_page3">
+    
+    <div id="balloon_container"></div>
+    <div id="bird_container"></div>
+    <div id="letter_container">
+        <p>Dear ate Darl,</p>
+        <p>This is Maaarvsss! Anyway, happiest birthday to one of the coolest ate I know! To me, you're not just a churchmate or a friend that I play with. You're like a mentor too, and I have learned a lot of things because of you. </p>
+        <p>God knows how grateful I am to have an ate DJ by my side. You really inspire me, hindi lang sa programming, lalong lalo na sa worshipping. Kaya maraming salamat, ate Darl! Basta lahat ng mga tinuro mo sakin, habambuhay kong dadalhin. </p>
+        <p>I pray that you achieve your dreams in life! And know that no matter what, God will always be there for you. He will sustain you! See you nalang next service, ate Darlene!;p
+        </p>
+        <p style="text-align: right; "> With Love, Marvin</p>
+    </div>
+
+    <div id="overlay"></div>
+
+    <div id="bannerbox">
+        <h1>Celebrating 22 years of Joy</h1>
+    </div>
+
+    <div id="love_container">
+
+        <button id="love_button" onclick="heart_clicked()">
+            <img src="love_face.png" alt="love_face" id="love_face" width="350px" height="auto"> 
+        </button>
+        
+        <div id="click_heart" class="Click_Line">Click My Heart</div>
+    </div>
+
+    <div id="blessbox">
+        <div id="blessed_line">The World Just Got More Blessed Since:</div>
+        <div id="timer_holder">
+            <div id="ymd" class="big"></div>
+            <div id="hms" class="small"></div>
+        </div>
+    </div>
+</body>
+
+    <script>
+    window.onload = () => {
+        const container = document.getElementById("balloon_container");
+        function spawnBalloon() {
+            const balloon = document.createElement("img");
+            balloon.src = "balloon.png";
+            balloon.className = "balloon";
+            balloon.style.left = Math.random() * 95 + "%";
+            container.appendChild(balloon);
+            setTimeout(() => balloon.remove(), 6700);
+        }
+        for (let i = 0; i < 100; i++) {
+            setTimeout(spawnBalloon, Math.random() * 3000); 
+        }s
+    };
+    </script>
+</html>
