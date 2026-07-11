@@ -20,14 +20,9 @@ window.onload = () => {
       noBtn.style.top = y + "px";
     });
   }
-
-  if (localStorage.getItem("play") === "true")
-    { document.getElementById("chipi").play();
-    localStorage.removeItem("play")}
 }
 
 function yesBtn_clicked() {
-    localStorage.setItem("play","true")
     window.location.href="page2.html"
 }
 
