@@ -1,12 +1,12 @@
 window.onload = () => {
   const textbox1 = document.getElementById("message1");
-  const text1 = "Wassup, ate Darlene! Are you Ready for a Party?!";
+  const text1 = "Wassuppp, ate Darleneeee!!!";
   let i = 0;
   function typeWriter(textbox, text) {
     if (i < text.length) {
       textbox.textContent += text.charAt(i);
       i++;
-      setTimeout(() => typeWriter(textbox, text), 25);
+      setTimeout(() => typeWriter(textbox, text), 30);
     }
   }
   typeWriter(textbox1, text1);
@@ -14,12 +14,22 @@ window.onload = () => {
   const noBtn = document.getElementById("no_btn");
   if (noBtn) {
     noBtn.addEventListener("mouseover", () => {
+      document.getElementById("fah").play();
       const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
       const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
       noBtn.style.left = x + "px";
       noBtn.style.top = y + "px";
     });
   }
+}
+
+function supBtn_clicked() {
+  document.getElementById("wassup_face1").style.display = "none";
+  document.getElementById("sup_btn").style.display = "none";
+  document.getElementById("wassup_face2").style.display = "block";
+  document.getElementById("yes_btn").style.display = "block";
+  document.getElementById("no_btn").style.display = "block";
+  document.getElementById("no_btn_shadow").style.display = "block";
 }
 
 function yesBtn_clicked() {
@@ -31,9 +41,8 @@ function nextBtn_clicked() {
 }
 
 function updateTimer() {
-  const birthday = new Date("2004-07-16T00:00:00");
+  const birthday = new Date("2005-07-16T00:00:00");
   const now = new Date();
-  const diff = now - birthday;
 
   let years = now.getFullYear() - birthday.getFullYear();
   let months = now.getMonth() - birthday.getMonth();

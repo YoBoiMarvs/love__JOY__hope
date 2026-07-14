@@ -8,16 +8,29 @@
     <script src="bday.js"></script>
 </head>
 <body id="body_page1">
-    <div class="Speech_Bubble" id="message1"></div>
 
-    <img src="smiling_face.png" alt="smiling_face"
+    <div id="wassup_face1">
+        <div class="Speech_Bubble" id="message1"></div>
+
+        <img src="smiling_face.png" alt="smiling_face"
     width="350px" height="auto">
+    </div>
+
+    <div id="wassup_face2">
+        <div class="Speech_Bubble">Are you Ready for a Partyyy?!</div>
+
+        <img src="smiling_face.png" alt="smiling_face"
+    width="350px" height="auto">
+    </div>
+
+
+    <audio src="fah.mp3" id="fah" type="audio/mpeg" preload="auto"></audio>
 
     <div class="buttons">
+        <button id="sup_btn" onclick="supBtn_clicked()">Wassup, Marvs!</button>
         <button id="no_btn_shadow">NOPE!!!</button>
         <button id="yes_btn" onclick="yesBtn_clicked()">YESSIR</button>
         <button id="no_btn">NOPE!!!</button>
-
     </div>
 </body>
 </html>

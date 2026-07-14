@@ -40,12 +40,20 @@
             <div class="Speech_Bubble">Hold up, Marvs aint finished yet!</div>
 
             <img id="mewing_face" src="mewing_face.png" alt="mewing_face" width="350px" height="auto">
+
+            <audio id="holdup">
+                <source src="holdup.mp3" type="audio/mpeg">
+            </audio>
         </div>
 
         <div class="faces" id="face3">
             <div class="Speech_Bubble">It's time for some real surprises</div>
 
             <img id="devious_face" src="devious_face.png" alt="devious_face" width="350px" height="auto">
+
+            <audio id="sus">
+                <source src="sus.mp3" type="audio/mpeg">
+            </audio>
         </div>
 
         <div class="faces" id="face4">
@@ -64,7 +72,16 @@
             const second_part = document.getElementById("second_part");
             second_part.style.display = "flex";
             second_part.style.animation = "popUp 0.3s ease forwards";
-            document.getElementById("party_horn").play();
+            
+            const horn = document.getElementById("party_horn");
+            const holdup = document.getElementById("holdup");
+            const sus = document.getElementById("sus");
+
+            horn.play();
+            horn.addEventListener("ended", () => {
+            setTimeout(() => holdup.play(), 1000);
+            setTimeout(() => sus.play(), 3500)});
+
             confetti({
                 particleCount: 100,
                 spread: 120,

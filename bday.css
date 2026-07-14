@@ -10,7 +10,7 @@
 }
 
 button{
-    padding: 8px 16px;
+    padding: 6px 12px;
     font-size: 10px;
     border-radius: 15px;
 }
@@ -30,24 +30,32 @@ button{
 
 .buttons{
     display: flex;
-    gap: 25px;
+    gap: 75px;
 }
 
 #yes_btn{
+    display: none;
     background: lightgreen;
 }
 
 #no_btn{
+    display: none;
     position: absolute;
     background: lightcoral;
     z-index: 2;
 }
 
 #no_btn_shadow{
+    display: none;
     visibility: hidden;
     background-color: aqua;
     z-index: 1;
 }
+
+#sup_btn{
+    background: skyblue;
+}
+
 #yes_btn:hover{
     
     transform: scale(1.20);
@@ -57,8 +65,14 @@ button{
     transform: scale(1.20);
 }
 
+#sup_btn:hover{
+    
+    transform: scale(1.20);
+}
 
-
+#wassup_face2{
+    display: none;
+}
 
 /* Page 2 */
 #body_page2{
